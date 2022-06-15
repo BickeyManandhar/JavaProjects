@@ -26,7 +26,7 @@ public class MainClass {
 			d=new RedDog();
 			d.walk();
 			d.bark();
-			System.out.println("---------------");
+			System.out.println("--------End of Program-------");
 
 	}
 
