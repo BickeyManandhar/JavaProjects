@@ -8,4 +8,7 @@ public class SleepDog extends Dog{
 	public void walk() {
 		System.out.println("Dog can walk slower.");
 	}
+	public void bark() {
+		System.out.println("Dog cannot Bark");
+	}
 }
