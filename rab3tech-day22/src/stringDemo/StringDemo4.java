@@ -14,6 +14,9 @@ public class StringDemo4 {
 		System.out.println("------------------- After applying .reverse() method -------------------");
 		str.reverse();
 		System.out.println(str);
+		System.out.println("------------------- After applying .insert(0,abc) method -------------------");
+		str.insert(0,"abc");// this inserts abc starting from index 0
+		System.out.println(str);// abcdefghij
 	}
 
 }
