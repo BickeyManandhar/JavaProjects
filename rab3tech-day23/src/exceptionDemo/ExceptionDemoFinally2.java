@@ -32,4 +32,3 @@ public class ExceptionDemoFinally2 {
 	}
 
 }
-4
