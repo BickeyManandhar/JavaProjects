@@ -49,18 +49,7 @@ public class HashMapDemo1 {
 		System.out.println("---   -----");
 		Set<String> keys2 = hm.keySet(); // keySet() method will get the key
 		for (String temp2 : keys2) {
-			System.out.println(temp2 + "  " + hm.get(te
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-		mp2)); // get(key) will get value
+			System.out.println(temp2 + "  " + hm.get(temp2)); // get(key) will get value
 		}
 		
 		System.out.println("\n----------------------- End of Program------------------------\n");
