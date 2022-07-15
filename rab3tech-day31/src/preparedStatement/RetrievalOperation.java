@@ -1,4 +1,4 @@
-package preparedDtatement;
+package preparedStatement;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,34 +15,36 @@ public class RetrievalOperation {
 	public static void main(String[] args) {
 
 		try {
-			// Load/Register driver class
+			//1. Load/Register driver class
 			Class.forName("com.mysql.jdbc.Driver");
 
 			try {
-				// Create a connection
+				//2. Create a connection
 				conn = DriverManager.getConnection(dbURL, username, password);
-				// Create a statement - two interface available, PreparedStatement and Statement
-				PreparedStatement ps = conn.prepareStatement("select * from students where id=?");
+				//3. Create a statement - two interface available, PreparedStatement and Statement
+				PreparedStatement ps = conn.prepareStatement("select * from students where id=?"); // retrieve particular
+																									// record from db
 				ps.setInt(1, 2); // ?=2
 
-				// Execute queries
+				//4. Execute queries
 				// executeQuery() --> only for select operation. (It returns ResultSet)
 				// executeUpdate() --> for all operations except select operation.(It returns
 				// int type value)
 				ResultSet rs = ps.executeQuery();
 				while (rs.next()) {
-					System.out.println(rs.getInt("id") + "   " + rs.getString("name") + "   " + rs.getString("country")
-							+ "   " + rs.getString("email"));
+					/*
+					 * System.out.println(rs.getInt("id") + "   " + rs.getString("name") + "   " +
+					 * rs.getString("country") + "   " + rs.getString("email")); OR we can do
+					 */
+					System.out.println(rs.getString(1) + "   " + rs.getString(2) + "   " + rs.getString(3)+ "   " + rs.getString(4));
 				}
-				// Close the connection
+				//5. Close the connection
 				conn.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
