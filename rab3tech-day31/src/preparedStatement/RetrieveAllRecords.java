@@ -31,10 +31,9 @@ public class RetrieveAllRecords {
 				// int type value)
 				ResultSet rs = ps.executeQuery();
 				while (rs.next()) {
-					/*
-					 * System.out.println(rs.getInt("id") + "   " + rs.getString("name") + "   " +
-					 * rs.getString("country") + "   " + rs.getString("email")); OR we can do
-					 */
+					// System.out.println(rs.getInt("id") + "   " + rs.getString("name") + "   " + rs.getString("country") + "   " + rs.getString("email")); 
+					 //OR we can do
+					
 					System.out.println(rs.getString(1) + "   " + rs.getString(2) + "   " + rs.getString(3)+ "   " + rs.getString(4));
 				}
 				//5. Close the connection

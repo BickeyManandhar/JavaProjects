@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head>
-<title>login page</title>
+<title>Edit page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -14,21 +14,28 @@
 <body>
 <div class="container">
 <h1 style="color:red;">${msg}</h1>
-<img src="images/login.jpg" alt="Login Image" width="200" height="200">
-  <h2>Sign in </h2>
-  <form action="LoginServlet" method="post">
+<img src="images/registration.jpg" alt="Login Image" width="400" height="200">
+  <h2>Edit form</h2><hr>
+  <form action="EditServlet" method="post">
+
+  <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control"  name="name" value="${ usr.name}">
+    </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" placeholder="Enter your email" name="email">
+      <input type="text" class="form-control"  name="email" value="${ usr.email}">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" placeholder="Enter password" name="password">
+      <input type="text" class="form-control"  name="password" value="${ usr.password}">
     </div>
-    
+
     <button type="submit" class="btn btn-danger">Submit</button>
-  </form>
-<a href="registration.jsp">Create an account.</a>
+    </form>
+
+
+
 </div>
 </body>
 </html>

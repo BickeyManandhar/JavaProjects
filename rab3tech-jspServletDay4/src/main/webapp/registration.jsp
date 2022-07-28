@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>login page</title>
+<title>Registration page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -14,9 +14,13 @@
 <body>
 <div class="container">
 <h1 style="color:red;">${msg}</h1>
-<img src="images/login.jpg" alt="Login Image" width="200" height="200">
-  <h2>Sign in </h2>
-  <form action="LoginServlet" method="post">
+<img src="images/registration.jpg" alt="Login Image" width="400" height="200">
+  <h2>Sign Up Form</h2><hr>
+  <form action="RegistrationServlet" method="post">
+  <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" placeholder="Enter your name" name="name">
+    </div>
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" placeholder="Enter your email" name="email">
@@ -26,9 +30,10 @@
       <input type="password" class="form-control" placeholder="Enter password" name="password">
     </div>
     
-    <button type="submit" class="btn btn-danger">Submit</button>
+    <button type="submit" class="btn btn-danger">Sign Up</button>
   </form>
-<a href="registration.jsp">Create an account.</a>
+  <a href="login.jsp">Already a member.</a>
+
 </div>
 </body>
 </html>
