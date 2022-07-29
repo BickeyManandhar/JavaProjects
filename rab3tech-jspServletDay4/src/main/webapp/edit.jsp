@@ -12,6 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+
 <div class="container">
 <h1 style="color:red;">${msg}</h1>
 <img src="images/registration.jpg" alt="Login Image" width="400" height="200">
@@ -20,22 +21,20 @@
 
   <div class="form-group">
       <label for="name">Name:</label>
-      <input type="text" class="form-control"  name="name" value="${ usr.name}">
+      <input type="text" class="form-control"  name="name" value="${ud.name}">
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="text" class="form-control"  name="email" value="${ usr.email}">
+      <input type="text" class="form-control"  name="email" value="${ud.email }">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="text" class="form-control"  name="password" value="${ usr.password}">
+      <input type="text" class="form-control"  name="password" value="${ ud.password}">
     </div>
 
     <button type="submit" class="btn btn-danger">Submit</button>
     </form>
-
-
-
 </div>
+
 </body>
 </html>

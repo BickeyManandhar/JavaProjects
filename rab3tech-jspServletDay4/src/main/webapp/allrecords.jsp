@@ -18,6 +18,7 @@
 <body>
 ${success}
 ${unsuccess}
+
 <h3 style="color:black;"><center>List of all records.</center> <hr width="700px;" color="black" align="center"  ></h3> <br>
 <div class="container">
   <div class="table-responsive">
@@ -36,7 +37,7 @@ ${unsuccess}
           <td>${usr.name}</td>
           <td>${usr.email}</td>
           <td>${usr.password}</td>
-          <td><a href="edit.jsp?email=${usr.email}"><button type="button" class="btn btn-primary"><img src="images/edit.png" alt="edit" width="20" height="20"></button></a></td>
+          <td><a href="PreEditServlet?email=${usr.email}"><button type="button" class="btn btn-primary"><img src="images/edit.png" alt="edit" width="20" height="20"></button></a></td>
           <td><a href="DeleteServlet?email=${usr.email}"><button type="button" class="btn btn-danger"><img src="images/delete.png" alt="delete" width="20" height="20"></button></a></td>
         </tr>
         </c:forEach>

@@ -1,5 +1,5 @@
 package com.servlet;
-
+//postedit servlet
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,6 +19,7 @@ public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	static String dbURL = "jdbc:mysql://localhost:3306/login";
 	static String username = "root";
+    Connection conn=null; 
 	
        
     
@@ -26,16 +27,15 @@ public class EditServlet extends HttpServlet {
 		String name=request.getParameter("name");
 		String email=request.getParameter("email");;
 		String password=request.getParameter("password");
-		Connection conn=null;
 		
 		try {
 		Class.forName("com.mysql.jdbc.Driver");
 		conn = DriverManager.getConnection(dbURL, username, "Bickey@123");
-		PreparedStatement ps = conn.prepareStatement("insert into userlogin(email, password, name) values(?,?,?)"); 
-		
-		ps.setString(1, email);
-		ps.setString(2, password);
-		ps.setString(3, name);
+		PreparedStatement ps = conn.prepareStatement("update userlogin set password=?, name=? where email=?"); 
+		ps.setString(1, password);
+		ps.setString(2, name);
+		ps.setString(3, email);
+		ps.executeUpdate();
 		
 		int numOfInsertedRecord=ps.executeUpdate();
 		
