@@ -25,7 +25,7 @@
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="text" class="form-control"  name="email" value="${ud.email }">
+      <input type="hidden" class="form-control"  name="email" value="${ud.email }">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
