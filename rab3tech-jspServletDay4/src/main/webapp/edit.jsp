@@ -25,11 +25,11 @@
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="hidden" class="form-control"  name="email" value="${ud.email }">
+      <input type="text" class="form-control"  name="email" value="${ud.email}">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="text" class="form-control"  name="password" value="${ ud.password}">
+      <input type="text" class="form-control"  name="password" value="${ud.password}">
     </div>
 
     <button type="submit" class="btn btn-danger">Submit</button>
